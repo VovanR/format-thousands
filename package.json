@@ -1,6 +1,6 @@
 {
   "name": "format-thousands",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Format thousands with custom separator",
   "main": "index.js",
   "scripts": {
