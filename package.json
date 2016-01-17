@@ -2,16 +2,15 @@
   "name": "format-thousands",
   "version": "1.0.0",
   "description": "Format thousands with custom separator",
-  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
   "scripts": {
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "prepush": "npm test",
     "test": "xo && nyc ava"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/VovanR/format-thousands.git"
-  },
+  "repository": "VovanR/format-thousands",
   "keywords": [
     "fromat",
     "separate",
