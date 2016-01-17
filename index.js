@@ -1,14 +1,16 @@
 module.exports = function formatThousands(number, separator) {
 	var result = '';
+
 	if (number === undefined) {
 		return result;
 	}
 
-	number = String(number);
 	if (separator === undefined) {
 		// &nbsp; (Non-Breaking Space)
 		separator = String.fromCharCode(160);
 	}
+
+	number = String(number);
 
 	if (number.length > 3) {
 		while (number.length % 3) {
