@@ -1,12 +1,11 @@
 {
   "name": "format-thousands",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Format thousands with custom separator",
   "files": [
     "index.js"
   ],
   "scripts": {
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "prepush": "npm test",
     "test": "xo && nyc ava"
   },
@@ -24,10 +23,10 @@
   },
   "homepage": "https://github.com/VovanR/format-thousands#readme",
   "devDependencies": {
-    "ava": "^0.10.0",
-    "coveralls": "^2.11.6",
-    "husky": "^0.10.2",
-    "nyc": "^5.2.0",
-    "xo": "^0.12.1"
+    "ava": "^0.13.0",
+    "coveralls": "^2.11.8",
+    "husky": "^0.11.3",
+    "nyc": "^6.1.1",
+    "xo": "^0.13.0"
   }
 }
