@@ -26,10 +26,6 @@ test('should set custom thousands separator', t => {
 	t.is(fn(1234567890, '_'), '1_234_567_890');
 });
 
-test('should set custom thousands separator', t => {
-	t.is(fn(1234567890, '_'), '1_234_567_890');
-});
-
 test('should return empty string if fired without args', t => {
 	t.is(fn(), '');
 });
