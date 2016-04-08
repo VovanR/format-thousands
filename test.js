@@ -29,3 +29,7 @@ test('should set custom thousands separator', t => {
 test('should return empty string if fired without args', t => {
 	t.is(fn(), '');
 });
+
+test('should not format `null`', t => {
+	t.is(fn(null), '');
+});
