@@ -9,7 +9,7 @@
 [![Dependency Status][depstat-image]][depstat-url]
 [![DevDependency Status][depstat-dev-image]][depstat-dev-url]
 
-> Format thousands with custom separator
+> Format thousands with custom separator: 1 000 000
 
 Demo: [vovanr.github.io/format-thousands][demo]
 
