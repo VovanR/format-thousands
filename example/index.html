@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>format-thousands</title>
+    <meta name="description" content="Format thousands with custom separator">
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body class="formatter">
+
+<div class="formatter__input">
+	<input
+		class="formatter__control formatter__control_name_number"
+		value="1000000"
+		type="text"
+		placeholder="number"
+		/>
+
+	<input
+		class="formatter__control formatter__control_name_separator"
+		value=""
+		type="text"
+		placeholder="separator"
+		/>
+</div>
+
+<div class="formatter__output">
+	<input
+		class="formatter__control formatter__control_name_result"
+		value=""
+		readonly
+		type="text"
+		placeholder="result"
+		/>
+	</label>
+</div>
+
+<a class="repo" href="https://github.com/vovanr/format-thousands">MIT&nbsp;©&nbsp;<span>Vladimir Rodkin</span></a>
+
+<script>window.module = {}</script>
+<script src="index.js"></script>
+<script>
+(function (formatThousands) {
+	'use strict'
+
+	var numberControl = document.querySelector('.formatter__control_name_number')
+	var separatorControl = document.querySelector('.formatter__control_name_separator')
+	var resultControl = document.querySelector('.formatter__control_name_result')
+
+	numberControl.addEventListener('input', renderResult)
+
+	separatorControl.addEventListener('input', renderResult)
+
+	function renderResult() {
+		resultControl.value = formatThousands(numberControl.value, separatorControl.value || undefined)
+	}
+
+	renderResult()
+
+})(window.module.exports)
+</script>
+
+</body>
+</html>

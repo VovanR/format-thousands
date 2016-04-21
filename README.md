@@ -1,37 +1,49 @@
 # format-thousands
 
+[![Commitizen friendly][commitizen-image]][commitizen-url]
+[![XO code style][codestyle-image]][codestyle-url]
+
 [![NPM version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Coveralls Status][coveralls-image]][coveralls-url]
 [![Dependency Status][depstat-image]][depstat-url]
 [![DevDependency Status][depstat-dev-image]][depstat-dev-url]
-[![XO code style][codestyle-image]][codestyle-url]
 
 > Format thousands with custom separator
 
+Demo: [vovanr.github.io/format-thousands][demo]
+
 ## Install
 
-```sh
+```
 npm install --save format-thousands
 ```
 
 ## Usage
 
-```javascript
+```js
 var formatThousands = require('format-thousands');
 
-console.log(formatThousands(1000));
+formatThousands(1000);
 // '1 000'
 
-console.log(formatThousands(1000000, '`'));
+formatThousands(1000000, '`');
 // '1`000`000'
 
-console.log(formatThousands());
+formatThousands();
 // ''
 ```
 
 ## License
 MIT © [Vladimir Rodkin](https://github.com/VovanR)
+
+[demo]: https://vovanr.github.io/format-thousands
+
+[commitizen-url]: http://commitizen.github.io/cz-cli/
+[commitizen-image]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square
+
+[codestyle-url]: https://github.com/sindresorhus/xo
+[codestyle-image]: https://img.shields.io/badge/code_style-XO-5ed9c7.svg?style=flat-square
 
 [npm-url]: https://npmjs.org/package/format-thousands
 [npm-image]: http://img.shields.io/npm/v/format-thousands.svg?style=flat-square
@@ -47,6 +59,3 @@ MIT © [Vladimir Rodkin](https://github.com/VovanR)
 
 [depstat-dev-url]: https://david-dm.org/VovanR/format-thousands
 [depstat-dev-image]: https://david-dm.org/VovanR/format-thousands/dev-status.svg?style=flat-square
-
-[codestyle-url]: https://github.com/sindresorhus/xo
-[codestyle-image]: https://img.shields.io/badge/code_style-XO-5ed9c7.svg?style=flat-square
