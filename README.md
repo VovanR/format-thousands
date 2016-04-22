@@ -25,13 +25,13 @@ npm install --save format-thousands
 var formatThousands = require('format-thousands');
 
 formatThousands(1000);
-// '1 000'
+//=> '1 000'
 
 formatThousands(1000000, '`');
-// '1`000`000'
+//=> '1`000`000'
 
 formatThousands();
-// ''
+//=> ''
 ```
 
 ## License
