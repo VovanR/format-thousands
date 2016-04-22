@@ -30,6 +30,7 @@
 	border: 2px solid #fff;
 	transition: border ease 0.15s;
 	outline: none;
+	min-width: 0;
 }
 
 .formatter__control:focus {
