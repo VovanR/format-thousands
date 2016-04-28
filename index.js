@@ -1,7 +1,7 @@
 module.exports = function formatThousands(number, separator) {
 	var result = '';
 
-	if (!number) {
+	if (!number && number !== 0) {
 		return result;
 	}
 

@@ -9,6 +9,10 @@ test('should return \'1\'', t => {
 	t.is(fn(1), '1');
 });
 
+test('should return \'0\'', t => {
+	t.is(fn(0), '0');
+});
+
 test('should return \'12\'', t => {
 	t.is(fn(12), '12');
 });
