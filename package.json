@@ -5,9 +5,13 @@
   "license": "MIT",
   "repository": "VovanR/format-thousands",
   "author": "Vladimir Rodkin <mail@vovanr.com> (http://vovanr.com/)",
+  "engines": {
+    "node": ">=0.10.0"
+  },
   "scripts": {
     "prepush": "npm test",
     "test": "xo && nyc ava",
+    "tdd": "ava -w",
     "release-patch": "mversion patch",
     "release-minor": "mversion minor",
     "release-major": "mversion major",
