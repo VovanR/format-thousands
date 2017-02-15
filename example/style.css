@@ -1,8 +1,8 @@
 .formatter {
-	display: flex;
+    display: flex;
     height: 100%;
     justify-content: center;
-	flex-direction: column;
+    flex-direction: column;
     margin: 0;
     position: absolute;
     text-align: center;
@@ -10,60 +10,78 @@
 }
 
 .formatter__input {
-	display: flex;
-	flex: 2;
-	height: 50%;
+    display: flex;
+    flex: 2;
+    height: 50%;
 }
 
 .formatter__output {
-	display: flex;
-	flex: 3;
-	height: 50%;
+    display: flex;
+    flex: 3;
+    height: 50%;
 }
 
 .formatter__control {
-	box-sizing: border-box;
-	font-size: 500%;
-	text-align: center;
-	padding: 1%;
-	background-color: #fff;
-	border: 2px solid #fff;
-	transition: border ease 0.15s;
-	outline: none;
-	min-width: 0;
+    box-sizing: border-box;
+    font-size: 500%;
+    text-align: center;
+    padding: 1%;
+    background-color: #fff;
+    border: 2px solid #fff;
+    transition: border ease 0.15s;
+    outline: none;
+    min-width: 0;
 }
 
 .formatter__control:focus {
-	border-color: #ff3304;
+    border-color: #ff3304;
 }
 
 .formatter__control_name_number {
-	width: 50%;
-	flex: 3;
+    width: 50%;
+    flex: 3;
 }
 
 .formatter__control_name_separator {
-	width: 50%;
-	flex: 1;
+    width: 50%;
+    flex: 1;
 }
 
 .formatter__control_name_result {
-	width: 100%;
-	background-color: #fbfbfb;
+    width: 100%;
+    background-color: #fbfbfb;
 }
 
-/* repository */
-.repo {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	font-size: 100%;
-	padding: 1em;
-	text-decoration: none;
-	opacity: 0.4;
-	color: #000;
+.copyright {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    opacity: 0.4;
+    font-family: monospace;
+    background-color: #fff;
+    transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 100%;
+    padding: 1em;
+    text-decoration: none;
+    color: #000;
+    white-space: nowrap;
 }
 
-.repo span {
-	text-decoration: underline;
+.copyright:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+.copyright__license {
+}
+
+.copyright__author {
+    text-decoration: underline;
+}
+
+.copyright {
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    background-clip: padding-box;
+    z-index: 10;
 }
