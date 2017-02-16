@@ -1,3 +1,11 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
 .formatter {
     display: flex;
     height: 100%;
@@ -43,14 +51,60 @@
 }
 
 .formatter__control_name_separator {
-    width: 50%;
-    flex: 1;
+	flex: 1;
+	font-size: 250%;
+	width: 100%;
 }
 
 .formatter__control_name_result {
     width: 100%;
     background-color: #fbfbfb;
 }
+
+.formatter__options {
+	display: flex;
+	flex-direction: column;
+    width: 50%;
+    flex: 2;
+	justify-content: center;
+}
+
+.formatter__checkbox {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: center;
+	font-size: 120%;
+}
+
+.formatter__checkbox input {
+	margin-left: -3%;
+}
+
+
+@media (max-width: 470px) {
+	.formatter__input {
+		flex-direction: column;
+		height: 50%;
+		flex: 3;
+	}
+
+	.formatter__output {
+		height: 50%;
+		flex: 2;
+	}
+
+	.formatter__control_name_number {
+		width: 100%;
+		flex: 1;
+	}
+
+	.formatter__options {
+		width: 100%;
+		flex: 1;
+	}
+}
+
 
 .copyright {
     position: fixed;
