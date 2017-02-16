@@ -3,8 +3,8 @@ var NBSP = String.fromCharCode(160);
 
 /**
  * @param {Number} number
- * @param {Object|String} [options=' ']
- * @param {String} [options.separator=' ']
+ * @param {Object|String} [options=' ']
+ * @param {String} [options.separator=' ']
  * @param {Boolean} [options.formatFourDigits=true]
  * @returns {String}
  */
