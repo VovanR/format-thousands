@@ -10,40 +10,64 @@
 
 	<link rel="stylesheet" href="style.css">
 </head>
-<body class="formatter">
+<body>
 
-<div class="formatter__input">
-	<input
-		class="formatter__control formatter__control_name_number"
-		value="1000000"
-		type="text"
-		placeholder="number"
-		/>
+<form
+	class="formatter"
+	action=""
+	>
+	<div class="formatter__input">
+		<input
+			class="formatter__control formatter__control_name_number"
+			value="1000000"
+			type="number"
+			name="number"
+			placeholder="number"
+			/>
 
-	<input
-		class="formatter__control formatter__control_name_separator"
-		value=""
-		type="text"
-		placeholder="separator"
-		/>
-</div>
+		<div class="formatter__options">
+			<input
+				class="formatter__control formatter__control_name_separator"
+				value=""
+				type="text"
+				name="separator"
+				placeholder="separator"
+				/>
 
-<div class="formatter__output">
-	<input
-		class="formatter__control formatter__control_name_result"
-		value=""
-		readonly
-		type="text"
-		placeholder="result"
-		/>
-	</label>
-</div>
+			<label class="formatter__checkbox">
+				<input
+					name="formatFourDigits"
+					value="formatFourDigits"
+					checked="checked"
+					type="checkbox"
+					/>
+
+				<span>
+					format four digits
+				</span>
+			</label>
+		</div>
+	</div>
+
+	<div class="formatter__output">
+		<input
+			class="formatter__control formatter__control_name_result"
+			value=""
+			readonly
+			type="text"
+			name="result"
+			placeholder="result"
+			/>
+		</label>
+	</div>
+</form>
 
 <a
 	class="copyright"
 	href="https://github.com/vovanr/format-thousands"
 	target="_blank"
 	rel="noopener noreferrer"
+	tabindex="-1"
 	>
 	<span class="copyright__license">MIT ©</span> <span class="copyright__author">Vladimir Rodkin</span>
 </a>
@@ -54,16 +78,25 @@
 (function (formatThousands) {
 	'use strict'
 
-	var numberControl = document.querySelector('.formatter__control_name_number')
-	var separatorControl = document.querySelector('.formatter__control_name_separator')
-	var resultControl = document.querySelector('.formatter__control_name_result')
+	var form = document.forms[0]
+	var elements = form.elements
+	var numberControl = elements.number
+	var separatorControl = elements.separator
+	var resultControl = elements.result
+	var formatFourDigits = elements.formatFourDigits
 
-	numberControl.addEventListener('input', renderResult)
-
-	separatorControl.addEventListener('input', renderResult)
+	form.addEventListener('input', renderResult)
+	form.addEventListener('change', renderResult)
+	form.addEventListener('submit', function (event) {
+		event.preventDefault();
+	})
 
 	function renderResult() {
-		resultControl.value = formatThousands(numberControl.value, separatorControl.value || undefined)
+		var options = {
+			separator: separatorControl.value || undefined,
+			formatFourDigits: formatFourDigits.checked
+		}
+		resultControl.value = formatThousands(numberControl.value, options)
 	}
 
 	renderResult()
