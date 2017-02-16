@@ -1,18 +1,42 @@
-module.exports = function formatThousands(number, separator) {
+// &nbsp; (Non-Breaking Space)
+var NBSP = String.fromCharCode(160);
+
+/**
+ * @param {Number} number
+ * @param {Object|String} [options=' ']
+ * @param {String} [options.separator=' ']
+ * @param {Boolean} [options.formatFourDigits=true]
+ * @returns {String}
+ */
+module.exports = function (number, options) {
 	var result = '';
+	var separator = NBSP;
+	var formatFourDigits = true;
 
 	if (!number && number !== 0) {
 		return result;
 	}
 
-	if (separator === undefined) {
-		// &nbsp; (Non-Breaking Space)
-		separator = String.fromCharCode(160);
-	}
-
 	number = String(number);
 
-	if (number.length > 3) {
+	if (typeof options === 'object') {
+		if (options.separator) {
+			separator = options.separator;
+		}
+
+		if (typeof options.formatFourDigits === 'boolean') {
+			formatFourDigits = options.formatFourDigits;
+		}
+	} else if (typeof options !== 'undefined') {
+		separator = options;
+	}
+
+	if (
+		number.length <= 3 ||
+		(number.length === 4 && !formatFourDigits)
+	) {
+		result = number;
+	} else {
 		while (number.length % 3) {
 			number = '#' + number;
 		}
@@ -24,8 +48,6 @@ module.exports = function formatThousands(number, separator) {
 		for (i = 3; i < length; i += 3) {
 			result = result + separator + number.substr(i, 3);
 		}
-	} else {
-		result = number;
 	}
 
 	return result;
