@@ -27,8 +27,14 @@ var formatThousands = require('format-thousands');
 formatThousands(1000);
 //=> '1 000'
 
+formatThousands(5000, {formatFourDigits: false});
+//=> '5000'
+
 formatThousands(1000000, '`');
 //=> '1`000`000'
+
+formatThousands(10000, {separator: "'"});
+//=> "10'000"
 
 formatThousands();
 //=> ''
