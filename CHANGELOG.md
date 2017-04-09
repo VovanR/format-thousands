@@ -1,3 +1,8 @@
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/VovanR/format-thousands/compare/v1.1.0...v1.1.1) (2017-04-09)
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/vovanr/format-thousands/compare/v1.0.4...v1.1.0) (2017-02-16)
 
