@@ -1,3 +1,13 @@
+<a name="1.1.2"></a>
+## [1.1.2](https://github.com/VovanR/format-thousands/compare/v1.1.0...v1.1.2) (2017-04-09)
+
+
+### Bug Fixes
+
+* **lib:** Fix decimal and negative formatting ([55c3586](https://github.com/VovanR/format-thousands/commit/55c3586)), closes [#7](https://github.com/VovanR/format-thousands/issues/7)
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/VovanR/format-thousands/compare/v1.1.0...v1.1.1) (2017-04-09)
 
