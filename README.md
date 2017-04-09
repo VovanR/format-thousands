@@ -36,6 +36,12 @@ formatThousands(1000000, '`');
 formatThousands(10000, {separator: "'"});
 //=> "10'000"
 
+formatThousands(-100000);
+//=> "-100 000"
+
+formatThousands(10000.0001)
+//=> "10 000.0001"
+
 formatThousands();
 //=> ''
 ```
