@@ -60,3 +60,14 @@ test('should not format `null` and `undefined`', t => {
 	t.is(fn(null), '');
 	t.is(fn(undefined), '');
 });
+
+test('should not format frac', t => {
+	t.is(fn(10000.0001, ' '), '10 000.0001');
+	t.is(fn(-1000000000.545, ' '), '-1 000 000 000.545');
+	t.is(fn(123456.1234567, ' '), '123 456.1234567');
+});
+
+test('should not format sign', t => {
+	t.is(fn(-100000, ' '), '-100 000');
+	t.is(fn(-100000000.545, ' '), '-100 000 000.545');
+});
