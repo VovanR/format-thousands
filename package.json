@@ -4,7 +4,7 @@
   "description": "Format thousands with custom separator: 1 000 000",
   "license": "MIT",
   "repository": "VovanR/format-thousands",
-  "author": "Vladimir Rodkin <mail@vovanr.com> (http://vovanr.com/)",
+  "author": "Vladimir Rodkin <mail@vovanr.com> (https://github.com/VovanR)",
   "engines": {
     "node": ">=0.10.0"
   },
