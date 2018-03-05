@@ -1,6 +1,21 @@
-// &nbsp; (Non-Breaking Space)
+/**
+ * Non-Breaking Space `&nbsp;`
+ * @const {string}
+ */
 var NBSP = String.fromCharCode(160);
 
+/**
+ * @typedef ParsedNumber
+ * @prop {Object} options
+ * @prop {string} options.integer
+ * @prop {string} options.fraction
+ * @prop {string} options.sign
+ */
+
+/**
+ * @param {number} number
+ * @returns {ParsedNumber}
+ */
 function parseNumber(number) {
 	var isNegative = number < 0;
 	var numberString = String(number);
@@ -15,6 +30,11 @@ function parseNumber(number) {
 	};
 }
 
+/**
+ * @param {number} number
+ * @param {string} separator
+ * @returns {string}
+ */
 function format(number, separator) {
 	number = String(number);
 
@@ -34,11 +54,21 @@ function format(number, separator) {
 }
 
 /**
- * @param {Number} number
- * @param {Object|String} [options=' ']
- * @param {String} [options.separator=' ']
- * @param {Boolean} [options.formatFourDigits=true]
- * @returns {String}
+ * @param {number} number
+ * @param {Object|string} [options=' ']
+ * @param {string} [options.separator=' ']
+ * @param {boolean} [options.formatFourDigits=true]
+ * @returns {string}
+ *
+ * @example
+ * formatThousands(1000);
+ * //=> '1 000'
+ *
+ * formatThousands(5000, {formatFourDigits: false});
+ * //=> '5000'
+ *
+ * formatThousands(10000, {separator: "'"});
+ * //=> "10'000"
  */
 module.exports = function (number, options) {
 	var result = '';
