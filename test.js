@@ -1,5 +1,5 @@
 import test from 'ava';
-import fn from './';
+import fn from '.';
 
 const NBSP = String.fromCharCode(160);
 

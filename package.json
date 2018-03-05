@@ -10,12 +10,12 @@
   },
   "scripts": {
     "prepush": "npm test",
-    "test": "xo && nyc ava",
+    "test": "xo --no-esnext && nyc ava",
     "tdd": "ava -w",
     "release-patch": "mversion patch",
     "release-minor": "mversion minor",
     "release-major": "mversion major",
-    "deploy": "gh-pages-deploy"
+    "deploy": "gh-pages -d example"
   },
   "files": [
     "index.js"
@@ -29,14 +29,15 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "ava": "^0.18.1",
-    "conventional-changelog-cli": "^1.2.0",
-    "coveralls": "^2.11.16",
-    "cz-conventional-changelog": "^1.2.0",
-    "husky": "^0.13.1",
+    "ava": "^0.25.0",
+    "conventional-changelog-cli": "^1.3.16",
+    "coveralls": "^3.0.0",
+    "cz-conventional-changelog": "^2.1.0",
+    "gh-pages": "^1.1.0",
+    "husky": "^0.14.3",
     "mversion": "^1.10.1",
-    "nyc": "^10.1.2",
-    "xo": "^0.17.1"
+    "nyc": "^11.4.1",
+    "xo": "^0.20.3"
   },
   "bugs": {
     "url": "https://github.com/VovanR/format-thousands/issues"
@@ -46,9 +47,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "gh-pages-deploy": {
-    "staticpath": "example",
-    "noprompt": false
   }
 }
