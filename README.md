@@ -4,7 +4,7 @@
 [![XO code style][codestyle-image]][codestyle-url]
 
 [![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
+[![Build Status][build-image]][build-url]
 [![Coveralls Status][coveralls-image]][coveralls-url]
 [![Dependency Status][depstat-image]][depstat-url]
 [![DevDependency Status][depstat-dev-image]][depstat-dev-url]
@@ -54,14 +54,14 @@ MIT © [Vladimir Rodkin](https://github.com/VovanR)
 [commitizen-url]: https://commitizen.github.io/cz-cli/
 [commitizen-image]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square
 
-[codestyle-url]: https://github.com/sindresorhus/xo
+[codestyle-url]: https://github.com/xojs/xo
 [codestyle-image]: https://img.shields.io/badge/code_style-XO-5ed9c7.svg?style=flat-square
 
 [npm-url]: https://npmjs.org/package/format-thousands
 [npm-image]: https://img.shields.io/npm/v/format-thousands.svg?style=flat-square
 
-[travis-url]: https://travis-ci.org/VovanR/format-thousands
-[travis-image]: https://img.shields.io/travis/VovanR/format-thousands.svg?style=flat-square
+[build-url]: https://github.com/VovanR/format-thousands/actions?query=workflow%3A%22Tests%22
+[build-image]: https://img.shields.io/github/workflow/status/VovanR/format-thousands/Tests?style=flat-square
 
 [coveralls-url]: https://coveralls.io/r/VovanR/format-thousands
 [coveralls-image]: https://img.shields.io/coveralls/VovanR/format-thousands.svg?style=flat-square
