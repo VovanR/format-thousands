@@ -1,3 +1,23 @@
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/VovanR/format-thousands/compare/v1.1.0...v2.0.0) (2020-12-30)
+
+
+### Bug Fixes
+
+* **lib:** Fix decimal and negative formatting ([3cac3ef](https://github.com/VovanR/format-thousands/commit/3cac3ef)), closes [#7](https://github.com/VovanR/format-thousands/issues/7)
+
+
+### build
+
+* **package:** Upgrade development dependencies ([495a1fd](https://github.com/VovanR/format-thousands/commit/495a1fd))
+
+
+### BREAKING CHANGES
+
+* **package:** Drop support of Node.js < v10
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/VovanR/format-thousands/compare/v1.1.0...v1.1.1) (2017-04-09)
 
