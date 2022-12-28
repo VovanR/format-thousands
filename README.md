@@ -6,8 +6,6 @@
 [![NPM version][npm-image]][npm-url]
 [![Build Status][build-image]][build-url]
 [![Coveralls Status][coveralls-image]][coveralls-url]
-[![Dependency Status][depstat-image]][depstat-url]
-[![DevDependency Status][depstat-dev-image]][depstat-dev-url]
 
 > Format thousands with custom separator: 1 000 000
 
@@ -60,14 +58,8 @@ MIT © [Vladimir Rodkin](https://github.com/VovanR)
 [npm-url]: https://npmjs.org/package/format-thousands
 [npm-image]: https://img.shields.io/npm/v/format-thousands.svg?style=flat-square
 
-[build-url]: https://github.com/VovanR/format-thousands/actions?query=workflow%3A%22Tests%22
-[build-image]: https://img.shields.io/github/workflow/status/VovanR/format-thousands/Tests?style=flat-square
+[build-url]: https://github.com/VovanR/format-thousands/actions/workflows/test-workflow.yml
+[build-image]: https://img.shields.io/github/actions/workflow/status/vovanr/format-thousands/test-workflow.yml?style=flat-square
 
 [coveralls-url]: https://coveralls.io/r/VovanR/format-thousands
 [coveralls-image]: https://img.shields.io/coveralls/VovanR/format-thousands.svg?style=flat-square
-
-[depstat-url]: https://david-dm.org/VovanR/format-thousands
-[depstat-image]: https://david-dm.org/VovanR/format-thousands.svg?style=flat-square
-
-[depstat-dev-url]: https://david-dm.org/VovanR/format-thousands
-[depstat-dev-image]: https://david-dm.org/VovanR/format-thousands/dev-status.svg?style=flat-square
